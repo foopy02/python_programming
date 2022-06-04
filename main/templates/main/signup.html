@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Регистрация
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+
+      <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+        <form id="contact" action="" method="post">
+          <div class="row justify-content-center" id="form_of_login">
+            <div class="col-lg-12">
+              <div class="contact-dec">
+                <img src="main/images/contact-dec-v3.png" alt="">
+              </div>
+            </div>
+       
+            <div class="col-lg-7">
+            <h2 class="mt-5">Регистрация</h2>
+
+              <div class="fill-form pt-2">
+                <div class="row justify-content-center">
+                    {% csrf_token %}
+                      <div class="col-lg-6">
+                    <fieldset>
+                      <input type="name" name="username" id="username" placeholder="Логин"  required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="name" name="first_name" id="first_name" placeholder="Атыңыз"  required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="name" name="last_name" id="last_name" placeholder="Фамилия"  required>
+                    </fieldset>
+                    <fieldset>
+                      <input type="password" name="password" id="password"  placeholder="Құпия сөз" required="">
+                    </fieldset>
+                    <fieldset>
+                        <input type="password" name="password1" id="password1"  placeholder="Құпия сөз қайталау" required="">
+                    </fieldset>
+                    {% if form.errors %}
+                    <div class="alert alert-danger mt-3 mb-0">
+                       Бұндай логинмен сайтта қолданушы бар. Басқасын тандаңыз
+                    </div>
+                {% endif %}
+                  </div>
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button w-50">Тіркелу</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

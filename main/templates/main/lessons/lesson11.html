@@ -1,0 +1,31 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+	<p>Жиындар тізімдерге ұқсас, бірақ кейбір айырмашылықтары бар.&nbsp;</p>
+<p>
+<br>
+</p>
+<p>Біріншіден, жиындар толығымен кездейсоқ ретпен жасалады. Элементтерді өзіңіз қалағандай орналастыруға болады, бірақ олар кейін де рандомизацияланады.&nbsp;</p>
+<p>
+<br>
+</p>
+<p>Екіншіден, жиындарда қайталанатын элементтер болуы мүмкін емес. Бірдей мәні бар барлық элементтер қайта көрсетілмейді.</p>
+<p>
+<br>
+</p>
+<p>Жинақтар тізімнен қайталанатын элементтерді жойғыңыз келгенде пайдалы, мысалы:</p><pre class=" language-python"><code class="lang  language-python">some_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">56</span><span class="token punctuation">,</span> <span class="token number">91</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">]</span>
+    <span class="token builtin">set</span><span class="token punctuation">(</span>some_list<span class="token punctuation">)</span> <span class="token comment"># Результат: 12, 56, 91</span></code></pre>
+	<p>Сонымен қатар жиындарға арналған операциялардың үлкен саны бар, олар төменде берілген:</p>
+	<div>
+		<br>
+	</div>
+
+	<div style="text-align: center;">
+		<br>
+	</div>
+
+	<p>
+		<br>
+	</p>
+	<h4>Frozenset</h4>
+<p>Frozenset – құруға мүмкіндік беретін әдіс, оны бағдарламаны орындау кезінде өзгертуге болмайды. <u>Frozenset</u> жиынтық пен кортеждің қоспасы болып шықты.</p>
+</div> {% endblock %}

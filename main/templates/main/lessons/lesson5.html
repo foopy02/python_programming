@@ -1,0 +1,21 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+    <h3>Шартты операторлар дегеніміз не?</h3>
+    <p>Олар сынақта анықталған енгізу параметрлеріне байланысты бағдарлама әрекетін өзгертуге жауапты. Қарапайым тілмен айтқанда: егер сан 1 болса, онда бағдарлама <strong>бір</strong> сценарийін, ал егер сан 2 болса, <strong>екі</strong>скриптті іске қосады. Шартты мәлімдемелердің ішінде алынған деректерді нақтылау үшін басқа да ұқсас шарттар болуы мүмкін. Бір оператордың ішінде сіз бірден бірнеше шартты тексере аласыз. Бірнеше шарттарды тексеру үшін оларды <code>және</code> элементімен (<em>логикалық және</em>) бөлу керек.</p>
+    <p>
+    <br>
+    </p>
+    <p>Шарт жасау мысалы:</p><pre class=" language-python"><code class="lang  language-python">a <span class="token operator">=</span> <span class="token number">2</span>
+    <span class="token keyword">if</span> a <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">and</span> a <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Проверка сработала"</span><span class="token punctuation">)</span></code></pre>
+	<p>Жазба экранда «a» айнымалысы 0 мәніне және 1 мәніне тең болмаса ғана көрсетіледі. Яғни оператордағы екі тексеру де нәтижені қайтаруы керек – <strong>true</strong>.</p>
+	<p>
+		<br>
+	</p>
+	<p><code>немесе</code> - логикалық немесе көмегімен тексеруге болады. Осы операторды пайдаланған кезде шарттардың кем дегенде біреуі «Енді» хабарламасын іске қосу үшін жеткілікті себеп болады.&nbsp;</p>
+	<p>
+		<br>
+	</p>
+	<p>Мысалы:</p><pre class=" language-python"><code class="lang  language-python">a <span class="token operator">=</span> <span class="token number">1.1</span>
+    <span class="token keyword">if</span> a <span class="token operator">!=</span> <span class="token number">1.1</span> <span class="token operator">or</span> a <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Проверка сработала"</span><span class="token punctuation">)</span></code></pre></div> {% endblock %}

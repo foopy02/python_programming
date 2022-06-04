@@ -1,0 +1,71 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+    <p>Мұрагерлік, инкапсуляция және полиморфизм дегеніміз не, біз қазірдің өзінде талқыладық
+        <noindex><a href="17">алдыңғы сабақ</a></noindex>, сондықтан біз әзірше оған тоқталмаймыз.</p>
+        <p>
+        <br>
+        </p>
+        <h4>Мұрагерлік</h4>
+        <p>Мұрагерлік - OOP негізгі ұғымдарының бірі. Мұрагерлік арқылы бір жалпы сыныпты (ата-аналық сынып) жасауға және негізгі сыныптан барлық өрістерді, әдістерді және конструкторларды иеленетін көптеген басқа сыныптарды (мұра сыныптарын) жасауға болады.</p>
+        <p>
+        <br>
+        </p>
+        <h5>Мұрагерлік не үшін қажет?</h5>
+        <p>Бізде бір үлкен Көлік класы бар делік. Класс барлық көлік құралдарының негізгі сипаттамаларын сипаттайды:</p>
+        <ul>
+        <li>өрістер: жылдамдық, салмақ, қуат қоры және т.б.;</li>
+        <li>әдістер: өрістерден ақпарат алу, жаңа мәндерді орнату;</li>
+        <li>конструктор: бос және барлық өрістерді орнату арқылы.</li>
+        </ul>
+        <p>
+        <br>
+        </p>
+        <p>Сынып негізінде біз жеңіл автокөлік нысанын, жүк көлігі нысанын, ұшақ нысанын және т.б. жасай аламыз. Барлық нысандардың сипаттамалары мен әдістері бірдей болады.&nbsp;</p>
+        <p>
+        <br>
+        </p>
+        <p>Біз көлік пен ұшақ нысанының өрістері мен сипаттамалары әртүрлі болатынын анық түсінеміз. Мұны қалай істеу керек:</p>
+        <ol>
+        <li>Сіз екі бөлек сыныпты жасай аласыз: "Автомобиль" және "Ұшақ". Әрбір сыныпта Transport сыныбынан қайта жазылған барлық әдістер, өрістер және конструкторлар, сонымен қатар белгілі бір сынып үшін ғана маңызды жаңа әдістер болады;</li>
+        <li>Сіз екі бала сыныбын жасай аласыз: "Автомобиль" және "Ұшақ". Екі класс «Транспорт» сыныбынан барлығын мұраға алады және сонымен бірге өздерінің қосымша функцияларын қамтиды. Осылайша, кодтың қайталануы болмайды және код кішірейіп, таза болады.</li>
+        </ol>
+        <p>
+        <br>
+        </p>
+        <h5>Ұрпақ кластарын жасау</h5>
+        <p>Мұрагер класс жасау үшін класс жасап, негізгі сыныптан мұраны көрсету керек.</p>
+        <p>
+        <br>
+        </p>
+        <p>Ұрпақ класының мысалы:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">class</span> <span class="token class-name">Cars</span><span class="token punctuation">:</span>
+	wheels <span class="token operator">=</span> <span class="token number">4</span> <span class="token comment"># Общее значение для всех объектов,</span>
+	<span class="token comment"># так как все машины имеют колеса</span>
+		
+<span class="token keyword">class</span> <span class="token class-name">BMW</span> <span class="token punctuation">(</span>Cars<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	is_m_serias <span class="token operator">=</span> true <span class="token comment"># Является ли модель "М" серии?</span>
+	<span class="token comment"># Переменная нужна только в классе BMW</span></code></pre>
+	<h4><br></h4>
+	<h4>Инкапсуляция</h4>
+<p>Инкапсуляция сыныптағы функцияға қол жеткізуді шектеуге мүмкіндік береді. Осы тәсілдің арқасында шабуылдаушылар немесе өзіміз байқаусызда немесе әдейі қоңырау шала алмаймыз немесе әдісті өзгерте алмаймыз.</p>
+<div>
+<br>
+</div>
+<p>Мысалы:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">class</span> <span class="token class-name">Some</span><span class="token punctuation">:</span>
+	<span class="token keyword">def</span> <span class="token function">_printWords</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Попробуй меня вызвать"</span><span class="token punctuation">)</span>
+
+obj <span class="token operator">=</span> Some<span class="token punctuation">(</span><span class="token punctuation">)</span>
+obj<span class="token punctuation">.</span>_printWords<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># Вызов функции ничего не даст</span></code></pre>
+<p>Астын екі рет сызу арқылы қорғаныс әсері күшейтіледі, сондықтан функцияны шақыру мүмкін болмайды.</p>
+<h4><br></h4>
+<h4>Полиморфизм</h4>
+<div>Полиморфизм ұрпақ кластарындағы функцияларды өзгертуге мүмкіндік береді. Мысалы:</div><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">class</span> <span class="token class-name">Cars</span><span class="token punctuation">:</span>
+	<span class="token keyword">def</span> <span class="token function">nothing</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># Пустая функция</span>
+		<span class="token keyword">pass</span>
+		
+<span class="token keyword">class</span> <span class="token class-name">BMW</span> <span class="token punctuation">(</span>Cars<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">def</span> <span class="token function">nothing</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+		<span class="token keyword">print</span> <span class="token punctuation">(</span>word <span class="token operator">+</span> <span class="token string">"!"</span><span class="token punctuation">)</span> <span class="token comment"># Функция теперь будет работать по новому</span>
+ 
+a <span class="token operator">=</span> BMW<span class="token punctuation">(</span><span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>nothing<span class="token punctuation">(</span><span class="token string">"Some"</span><span class="token punctuation">)</span></code></pre></div> {% endblock %}

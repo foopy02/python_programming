@@ -1,0 +1,31 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+    <p>Айнымалылар өте маңызды, себебі олар ақпаратты сақтауға және кейінірек пайдалануға мүмкіндік береді. Бастапқыда айнымалыға неліктен бірдеңе жазу керектігі анық болмауы мүмкін, егер сіз оларсыз жай ғана мәндермен жұмыс істей алсаңыз. Айнымалылар туралы түсінік сәл кейінірек, күрделірек бағдарламалар жасауды бастағанда және ақпаратты бір жерде сақтау қажет болғанда келеді.</p>
+    <p>
+    <br>
+    </p>
+    <p><strong>Python</strong> тіліндегі айнымалы типтер нақты жарияланбаған, бірақ олар сонда да бар. Аудармашы айнымалыға не жазылғанын түсінеді және осының негізінде осы айнымалыға тип қосады.</p>
+    <p>
+    <br>
+    </p>
+    <p>Программаны орындау барысында айнымалыларды қайта жазуға, сонымен қатар олардың типін өзгертуге болады. Егер бастапқыда айнымалы <u>float</u> типінде болса, оны кейін басқа түрге түрлендіруге болады, мысалы,&nbsp;<u>string</u>.</p><pre class=" language-python"><code class="lang  language-python">first_num <span class="token operator">=</span> <span class="token number">23.2</span> <span class="token comment"># Тип данных float</span>
+    first_num <span class="token operator">=</span> <span class="token string">"1"</span> <span class="token comment"># Тип данных string</span></code></pre>
+	<div>Бірнеше айнымалыларды әртүрлі деректер түрлерімен біріктіру кезінде бағдарлама қатені тудырады.</div>
+    <p>
+    <br>
+    </p>
+    <p>Мысалы:</p><pre class=" language-python"><code class="lang  language-python">first_num <span class="token operator">=</span> <span class="token string">"IloveYou"</span>
+    second_num <span class="token operator">=</span> <span class="token number">13</span>
+    res <span class="token operator">=</span> first_num <span class="token operator">+</span> second_num <span class="token comment"># Скрипт выдаст ошибку</span></code></pre>
+	<div style="line-height: 1.8;">Python-да 4 негізгі айнымалы түрі бар:
+        <ul>
+        <li style="line-height: 1.8;"><code>some = 1</code> Integer - бүтін сандар;</li>
+        <li style="line-height: 1.8;"><code>some = 1,12</code> Float - өзгермелі нүкте сандары;</li>
+        <li style="line-height: 1.8;"><code>some = "Сәлеметсіз бе"</code> String - жолдар;</li>
+        <li style="line-height: 1.8;"><code>some = Ақиқат</code> Boolean - "жалған" немесе "шындық" мәнін қабылдайтын деректер түрі.</li>
+        </ul>Басқа да түрлері бар, бірақ біз оларды келесі сабақтарда қарастырамыз.</div>
+	<div>
+		<br>
+	</div>
+	<div>Бір жолда бірден бірнеше айнымалылар жасауға болады:</div><pre class=" language-python"><code class="lang  language-python">first <span class="token operator">=</span> sec <span class="token operator">=</span> third <span class="token operator">=</span> <span class="token number">1</span> <span class="token comment"># Всем трём переменным будет присвоено значение 1</span>
+    first<span class="token punctuation">,</span> sec<span class="token punctuation">,</span> third <span class="token operator">=</span> <span class="token string">"Hi"</span><span class="token punctuation">,</span> <span class="token number">75</span><span class="token punctuation">,</span> <span class="token number">23.1</span> <span class="token comment"># Поочередное присвоение значений</span></code></pre></div> {% endblock %}

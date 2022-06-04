@@ -1,0 +1,46 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+    <p><strong>Пайдалы сілтемелер:</strong></p>
+    <ul>
+    <li>
+    <noindex><a rel="nofollow" target="_blank" href="https://pypi.org/">Барлық модульдері бар сайт</a></noindex>.</li>
+    </ul>
+    <p>
+    <br>
+    </p>
+    <p>Модульдер - басқа Python файлдарының ішіне импортталатын қосымша файлдар. Әрбір модульде модульді кез келген файлға қосқаннан кейін пайдалануға болатын айнымалылар мен функциялар жиынтығы бар.&nbsp;</p>
+    <p>
+    <br>
+    </p>
+    <p>Сіз өзіңіздің модульдеріңізді жасай аласыз немесе дайын Python модульдерін пайдалана аласыз. Сіз барлық стандартты модульдердің толық тізімін таба аласыз
+    <noindex><a rel="nofollow" target="_blank" href="https://kk.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4 %D0%B0%D1%80%D1%82%D0%BD%D0%B0%D1%8F_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1 %82%D0%B5%D0%BA%D0%B0_Python">осы сілтеме бойынша</a></noindex>.</p>
+    <p>
+    <br>
+    </p>
+    <p>Барлық модульдерді есте сақтау мүмкін емес, ең бастысы, бұл қажет емес. Сізге тек қай модуль не үшін жауапты екенін түсіну керек және қажет болған жағдайда Интернетте толтырылған құжаттаманы қарауға болады. Мысалы, мұрағат жасағыңыз келе ме немесе бар мұрағатқа бірдеңе қосқыңыз келе ме? Содан кейін сізге архивтермен жұмыс істеуге мүмкіндік беретін <code>ZipFile</code> модулі қажет: оларды жасауға, файлдарды қосуға, файлдарды жоюға және басқа әрекеттерді орындауға.</p>
+    <p>
+    <br>
+    </p>
+    <p>Мұндай модульдердің өте көп саны бар және олардың әрқайсысы кейбір функциялар мен инновацияларға жауапты.&nbsp;</p>
+    <p>
+    <br>
+    </p>
+    <p>Модульді қосу үшін <code>import</code> пәрменін пайдаланып, модульдің атын көрсету керек.</p>
+    <p>
+    <br>Мысалы:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">import</span> time <span class="token comment"># Импорт одного модуля</span>
+    <span class="token keyword">import</span> random<span class="token punctuation">,</span> os <span class="token comment"># Импорт нескольких модулей</span></code></pre>
+	<p>Сіз өзіңіздің модульдеріңізді де жасай аласыз. Ол үшін жаңа файл жасап, оның аты бойынша файлды модуль ретінде басқа файлдарға қосу керек.</p>
+	<p>
+		<br>
+	</p>
+    <h4>From командасы</h4>
+    <p>Тек кейбір әдістерді немесе айнымалы мәндерді импорттау үшін <code>from</code> пәрменін пайдалануға болады. Бұл пәрмен келесідей жазылады:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">from</span> math <span class="token keyword">import</span> ceil <span class="token comment"># Импортируем лишь метод ceil</span></code></pre>
+	<p>
+		<br>
+	</p>
+	<h4>Модульдерге арналған бүркеншік аттар</h4>
+<p>Модульдермен жұмыс істеу кезінде бүркеншік аттарды да пайдалануға болады. Бұл модуль атын қысқартуға мүмкіндік береді, егер ол тым үлкен болса және оны әр кезде жазғыңыз келмесе.</p>
+	<p>
+		<br>
+	</p>
+	<p>Мысалы:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">import</span> Template <span class="token keyword">as</span> tem <span class="token comment"># Теперь можно обращаться к модулю как tem</span></code></pre></div> {% endblock %}

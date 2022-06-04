@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Логин
+{% endblock  %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+        <form id="contact" action="" method="post">
+          <div class="row justify-content-center" id="form_of_login">
+            <div class="col-lg-12">
+              <div class="contact-dec">
+                <img src="main/images/contact-dec-v3.png" alt="">
+              </div>
+            </div>
+       
+            <div class="col-lg-7">
+            <h2 class="mt-5">Логин</h2>
+
+              <div class="fill-form pt-2">
+                <div class="row justify-content-center">
+                    
+                    {% csrf_token %}
+                      <div class="col-lg-6">
+                        {% if form.errors %}
+                        <div class="alert alert-danger mt-3 mb-0">
+                            Пароль немесе логин дұрыс емес
+                        </div>
+                    {% endif %}
+                    <fieldset>
+                      <input type="name" name="username" id="username" placeholder="Логин"  required>
+                    </fieldset>
+                    <fieldset>
+                      <input type="password" name="password" id="password"  placeholder="Құпия сөз" required="">
+                    </fieldset>
+            
+                   
+                  </div>
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button w-50">Кіру</button>
+                    </fieldset>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

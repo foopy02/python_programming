@@ -1,0 +1,30 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+	<h4>Индекстер</h4>
+<p>Тізімдердегі нөмірлеу нөлден басталады, себебі тізім негізінен жай массив болып табылады, әдеттегі массивтегідей, санау 0-ден басталады. Индекстегі бірінші элемент 0, екіншісі - 1, үшінші - болады. 2 және т.б. Егер біз жоқ элементті алуға әрекет жасасақ, ол қатеге әкеледі.</p>
+<p>
+<br>
+</p>
+<p>Мысалы:</p><pre class=" language-python"><code class="lang  language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">"Hi"</span><span class="token punctuation">]</span> <span class="token comment"># Список</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Выдаст ошибку, так как элемента не существует</span></code></pre>
+	<p>Python тілінің ыңғайлы ерекшелігі - теріс индекстерді пайдаланып элементтерді соңынан алу мүмкіндігі. Мысалы, егер бізге екінші элемент соңынан қажет болса, оны келесідей жаза аламыз:</p><pre class=" language-python"><code class="lang  language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">"Hi"</span><span class="token punctuation">,</span> <span class="token number">1.56</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span> <span class="token comment"># Список</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Будет выведено 1.56</span></code></pre>
+	<p>
+		<br>
+	</p>
+	<h4>Кесінділер</h4>
+<p>Шектегіштер сізге қажет элементтерді ғана алу арқылы тізімді қысқартуға мүмкіндік береді. Олар келесідей жұмыс істейді: <code>тізім[START:END:STEP]</code>.</p>
+<ul>
+<li>Бастау - қай элементтен бастау керек (әдепкі - 0);</li>
+<li>Соңы - қандай элемент арқылы элементтерді аламыз (әдепкі тізімнің ұзындығына тең);</li>
+<li>Қадам - ​​элементтерді қандай қадаммен орындаймыз, мысалы, әрбір 2 немесе 3 (әдепкі бойынша, әрбір 1).</li>
+</ul>
+<p>
+<br>
+</p>
+<p>Бөлімде бір, бірнеше немесе тіпті барлық параметрлерді алып тастауға болады.</p><pre class=" language-python"><code class="lang  language-python"><span class="token builtin">list</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment"># Берем каждый третий элемент</span>
+    <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token comment"># Начиная со второго элемента берем каждый второй элемент</span>
+    <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token comment"># Начиная с 4 элемента берем все элементы по 6 элемент</span>
+    <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token comment"># Берем все элементы</span></code></pre>
+    <div>Теріс сандарды кесінділер үшін де пайдалануға болады.</div>
+</div> {% endblock %}

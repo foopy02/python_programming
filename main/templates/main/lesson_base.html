@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %} {{lesson.topic}} {% endblock %} {% block content %}
+
+<div class="d-flex">
+        <div class="container w-25">
+            <ul class="spisok_lessons">
+                {% for key,value in topics.items %}
+                <a href="{% url 'lesson' number=key %}">
+                    <li {% if key == lesson.number %} class="active_lesson" {% endif %}>{{value}}</li>
+                </a>
+                {% endfor %}
+ 
+            </ul>
+        </div>
+    <div class="container">
+        <h1 class="mx-auto mt-3 " style="text-align:center;color: #30A88B;">Сабақ №{{lesson.number}}</h1>
+        <h2 class="mx-auto mt-3 " style="text-align:center;color: #30A88B;">{{lesson.topic}}</h2>
+    
+    
+            {% block html_of_lesson %}
+    
+            {% endblock %}
+        <h2 class="mx-auto mt-3 mb-3" >Өзіңіз код жазып көріңіз</h2>
+            <iframe src="https://trinket.io/embed/python/edd948bf08" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <!-- BUTTON -->
+        <div class="row">
+            {% if lesson.isPassed %}
+            <a href="#" style="text-align: center; text-transform: none;" class="  w-50 mx-auto passed_btn">Бұл сабақты сіз өттіңіз</a>
+            {% else %}
+            {% if lesson.number != 1 %}
+            <a href="{% url 'lesson' number=lesson.number|add:-1 %}" style="text-align: center;" class="btn_custom w-25 mx-auto">Бұрынғы сабақ</a>
+    
+            {% endif %}
+            <a href="{% url 'pass_lesson' number=lesson.number %}" style="text-align: center;" class="btn_custom w-25 mx-auto">Бұл сабакпен таныстым</a>
+            {% if lesson.number != 26 %}
+            <a href="{% url 'lesson' number=lesson.number|add:1 %}" style="text-align: center;" class="btn_custom w-25 mx-auto">Келесі сабақ</a>
+    
+            {% endif %}
+    
+            {% endif %}
+        </div>
+       
+    </div>
+</div>
+
+{% endblock %}

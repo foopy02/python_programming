@@ -1,0 +1,42 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+	<p>Функцияларды қайталанатын кодты қоюға және қажет кезде оған сілтеме жасауға болатын шағын ішкі бағдарламалар деп атауға болады. Функциялар бағдарламаларды құруды әлдеқайда жеңілдетеді, өйткені бір типтегі кодты бірнеше рет көшірудің қажеті жоқ, бірақ біз жай ғана бір жалпы функцияны пайдалана аламыз.</p>
+<p>
+<br>
+</p>
+<p>Көптеген адамдар функциялар мен әдістерді шатастырады және олардың арасындағы айырмашылықты түсінбейді. Іс жүзінде ешқандай айырмашылықтар жоқ, өйткені әдістер де, функциялар да бірдей. Кластардан тыс жазылатын функциялар функциялар, ал сыныптардың ішінде жазылатын функциялар әдістер деп аталады.</p>
+<p>
+<br>
+</p>
+<p>Жағдай айнымалылармен бірдей. Сыныптарда айнымалылар өрістер деп аталады, ал сыныптардан тыс олар айнымалылар деп аталады.</p>
+<p>
+<br>
+</p>
+<p>Python-да функциялар <code>def</code> кілт сөзі арқылы жасалады. Әрбір функцияның кейбір параметрлері болуы немесе мүлде болмауы мүмкін. Қажет болса, функциялар кодты орындау кезінде бір нәрсені қайтара алады.</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">def</span> <span class="token function">some_test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># Функция без параметров</span>
+	x <span class="token operator">=</span> <span class="token number">23</span>
+	<span class="token keyword">return</span> x <span class="token comment"># Функция возвращает что-либо</span>
+
+<span class="token keyword">def</span> <span class="token function">some_test_2</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># Функция с 3 параметрами</span>
+	<span class="token keyword">return</span> a <span class="token operator">*</span> b <span class="token operator">*</span> c <span class="token comment"># Функция возвращает результат умножение чисел</span>
+
+<span class="token keyword">def</span> <span class="token function">print_something</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> prefix<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># Функция с 2 параметрами</span>
+	<span class="token keyword">print</span> <span class="token punctuation">(</span>prefix<span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">,</span> word<span class="token punctuation">)</span>
+	<span class="token keyword">pass</span> <span class="token comment"># Функция ничего не возвращает</span></code></pre>
+	<p>Функция ештеңе қайтармағанда, <code>pass</code> кілт сөзі жазылуы керек.&nbsp;</p>
+<p>
+<br>
+</p>
+<p>Функциялар басқа функцияларды қайтара алады, осылайша оларды шақырады. Функцияны шақыру үшін оның атын жазып, егер бар болса, параметрлерді беру керек:</p><pre class=" language-python"><code class="lang language-python">res <span class="token" operator" >=</span> some_test_2 <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span > < span class="token number">67</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation" "> )</span></code></pre>
+<p>Жоғарыдағы мысалда функцияның орындалу нәтижесі <code>res</code> айнымалысына орналастырылады. Одан әрі айнымалымен бағдарламадағы қалыпты мән сияқты жұмыс істеуге болады.</p>
+	<p>
+		<br>
+	</p>
+	<h4>Анонимді функциялар</h4>
+<p>Егер функция кодтың үлкен көлемін орындауды қажет етпесе, онда сіз анонимді функцияны пайдалана аласыз. Бұл <code>lambda</code> функциясын қажет етеді.&nbsp;</p>
+<p>
+<br>
+</p>
+<p>"lambda" функциясын жасау мысалы:</p><pre class=" language-python"><code class="lang  language-python">multiple <span class="token operator">=</span> <span class="token keyword">lambda</span> a<span class="token punctuation">,</span> b<span class="token punctuation">:</span> a <span class="token operator">*</span> b
+multiple<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span></code></pre>
+<p>Бұл функцияның аты жоқ, бірақ оны кейінірек кәдімгі функция ретінде шақыру қажет айнымалыға тағайындауға болады.</p>
+</div> {% endblock %}

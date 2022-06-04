@@ -1,0 +1,19 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+    <p>Конструкторлар объект жасалған кезде бірден оның кейбір сипаттамаларын орнатуға мүмкіндік береді. Мысалы, сізде нысанда міндетті түрде болуы керек бірнеше айнымалылар бар. Конструктор жасауға және нысан жасалған кезде берілетін бірнеше параметрлерді көрсетуге болады.&nbsp;</p>
+    <p>
+    <br>
+    </p>
+    <p>Бір сыныпта конструкторлардың шектеусіз саны болуы мүмкін және аудармашының өзі қай конструкторға сілтеме жасап тұрғаныңызды түсінеді. Конструктор жасау үшін <code>__init__</code> кілт сөзін пайдалану керек.</p>
+    <p>
+    <br>
+    </p>
+    <p>Конструкторы бар сыныптың мысалы:</p><pre class=" language-python"><code class="lang  language-python"><span class="token keyword">class</span> <span class="token class-name">Cars</span><span class="token punctuation">:</span>
+	wheels <span class="token operator">=</span> <span class="token number">0</span>
+	marka <span class="token operator">=</span> <span class="token string">""</span>
+	
+	<span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> wheels<span class="token punctuation">,</span> marka<span class="token punctuation">)</span><span class="token punctuation">:</span>
+		self<span class="token punctuation">.</span>wheels <span class="token operator">=</span> wheels
+		self<span class="token punctuation">.</span>marka <span class="token operator">=</span> marka
+bmw <span class="token operator">=</span> Cars<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">"X3"</span><span class="token punctuation">)</span> <span class="token comment"># Сразу добавили характеристики</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>bmw<span class="token punctuation">.</span>wheels<span class="token punctuation">)</span> <span class="token comment"># Результат - 4</span></code></pre></div> {% endblock %}

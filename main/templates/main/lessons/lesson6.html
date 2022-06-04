@@ -1,0 +1,22 @@
+{% extends 'main/lesson_base.html' %} {% load static %} {% block html_of_lesson %}
+<div class="main-text">
+	<p>Циклдер Python тілінің негізгі ұғымдарының бірі болып табылады. Олар бір әрекетті қатарынан бірнеше рет орындауға мүмкіндік береді. Мысалы, циклдер дерекқордан жазбаларды алу үшін жиі пайдаланылады және олар деректер массивтерімен жұмыс істегенде өте пайдалы. Python тіліндегі ілмектер басқа тілдердегі ұқсастарынан сәл ерекшеленеді.&nbsp;</p>
+<p>
+<br>
+</p>
+<h4>Do while циклі</h4>
+<p>Көптеген бағдарламалау тілдерінде бір рет орындалатын, содан кейін қайталанатын орындау үшін шартты тексеруді жүзеге асыратын, содан кейін оның негізінде не іске қосылуын жалғастыратын немесе одан шығатын <code>do..while</code> циклі бар. цикл. Python тілінде мұндай цикл жоқ, бірақ бұл проблема емес, өйткені мұндай цикл үшін алгоритм құру қиын емес.</p>
+<p>
+<br>
+</p>
+<p>Әрқашан кодыңызда шексіз циклдар жоқ екеніне көз жеткізіңіз. Олардың жұмысының нәтижесі - бағдарламаны ілу және тоқтату. Егер сіз шынымен циклды қолдансаңыз, жаңарту аралығын бірнеше секундқа орнатуыңыз керек. Сондай-ақ шексіз цикл жасап, оны <code>break</code> арқылы бұзуға болады.</p>
+	<p>
+		<br>
+	</p>
+	<p><code>do..while</code> циклін іске асырудың мысалы:</p><pre class=" language-python"><code class="lang  language-python">a <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span> <span class="token comment"># Сперва выполняем цикл</span>
+        a <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">if</span> a <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span> <span class="token comment"># Далее прописываем проверку</span>
+            <span class="token keyword">break</span></code></pre>
+	<p>Бұл мысалда цикл дұрыс болып шығады, себебі<strong>break</strong> оның орындалуын қажетті уақытта аяқтайды.</p>
+</div> {% endblock %}
